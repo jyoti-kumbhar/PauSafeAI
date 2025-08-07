@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Users | Admin | PaySafe AI</title>
+  <link rel="stylesheet" href="style_main.css"/>
+  <link rel="stylesheet" href="style_user.css"/>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="Asset/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="Asset/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Asset/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="Asset/favicon_io/site.webmanifest">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Admin Dashboard</div>
+      <ul class="nav-links">
+        <li><a href="index_admin.html">Home</a></li>
+        <li><a href="admin_dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>User Management</h1>
+      <p>View registered users, manage access, and perform administrative actions.</p>
+    </div>
+  </section>
+
+  <!-- User Table Section -->
+  <section class="features">
+    <h2>Registered Users</h2>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Registered On</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Placeholder rows, replace dynamically -->
+          <tr>
+            <td>U001</td>
+            <td>Jyoti Kumbhar</td>
+            <td>jyoti@example.com</td>
+            <td>2025-06-15</td>
+            <td>Active</td>
+            <td>
+              <button>Block</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>U002</td>
+            <td>Ravi Mehra</td>
+            <td>ravi@example.com</td>
+            <td>2025-07-01</td>
+            <td>Blocked</td>
+            <td>
+              <button>Unblock</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile - PaySafe AI</title>
+  <link rel="stylesheet" href="style_profile.css" />
+  <link rel="stylesheet" href="style_main.css" />
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="Asset/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="Asset/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Asset/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="Asset/favicon_io/site.webmanifest">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">PaySafe AI</div>
+      <ul class="nav-links">
+        <li><a href="index_user.html">Home</a></li>
+        <li><a href="user_history.html">History</a></li>
+        <li><a href="user_profile.html" class="active">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Profile Section -->
+  <section class="profile-container">
+    <div class="profile-card">
+      <h2>Profile</h2>
+      <div class="profile-info" id="profileDisplay">
+        <p><strong>Full Name:</strong> <span id="displayName">Jyoti Kumbhar</span></p>
+        <p><strong>Email:</strong> <span id="displayEmail">jyoti@example.com</span></p>
+        <p><strong>Phone:</strong> <span id="displayPhone">+91 9876543210</span></p>
+      </div>
+
+      <div class="profile-info" id="profileEdit" style="display: none;">
+        <p><strong>Full Name:</strong> <input type="text" id="editName" value="Jyoti Kumbhar" /></p>
+        <p><strong>Email:</strong> <input type="email" id="editEmail" value="jyoti@example.com" /></p>
+        <p><strong>Phone:</strong> <input type="text" id="editPhone" value="+91 9876543210" /></p>
+      </div>
+
+      <div class="profile-buttons">
+        <button id="editBtn" class="btn-primary">Edit Profile</button>
+        <button id="saveBtn" class="btn-primary" style="display: none;">Save</button>
+        <a href="index.html" class="btn-primary logout-btn">Logout</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const editBtn = document.getElementById("editBtn");
+    const saveBtn = document.getElementById("saveBtn");
+    const displaySection = document.getElementById("profileDisplay");
+    const editSection = document.getElementById("profileEdit");
+
+    editBtn.addEventListener("click", () => {
+      displaySection.style.display = "none";
+      editSection.style.display = "block";
+      editBtn.style.display = "none";
+      saveBtn.style.display = "inline-block";
+    });
+
+    saveBtn.addEventListener("click", () => {
+      const newName = document.getElementById("editName").value;
+      const newEmail = document.getElementById("editEmail").value;
+      const newPhone = document.getElementById("editPhone").value;
+
+      document.getElementById("displayName").innerText = newName;
+      document.getElementById("displayEmail").innerText = newEmail;
+      document.getElementById("displayPhone").innerText = newPhone;
+
+      displaySection.style.display = "block";
+      editSection.style.display = "none";
+      editBtn.style.display = "inline-block";
+      saveBtn.style.display = "none";
+    });
+  </script>
+
+</body>
+</html>
